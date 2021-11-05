@@ -12448,7 +12448,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 15
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -16438,6 +16438,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1824620558, guid: 820cc75aecbafd04ca8123c500917e03, type: 3}
+      propertyPath: jumpSpeed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8413959109216864493, guid: 820cc75aecbafd04ca8123c500917e03, type: 3}
       propertyPath: m_Name
       value: Red (Player)
@@ -16452,7 +16456,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8413959109216864496, guid: 820cc75aecbafd04ca8123c500917e03, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.49
+      value: 3.46
       objectReference: {fileID: 0}
     - target: {fileID: 8413959109216864496, guid: 820cc75aecbafd04ca8123c500917e03, type: 3}
       propertyPath: m_LocalPosition.z
@@ -16485,6 +16489,14 @@ PrefabInstance:
     - target: {fileID: 8413959109216864496, guid: 820cc75aecbafd04ca8123c500917e03, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8413959109216864497, guid: 820cc75aecbafd04ca8123c500917e03, type: 3}
+      propertyPath: m_GravityScale
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8413959109216864497, guid: 820cc75aecbafd04ca8123c500917e03, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 820cc75aecbafd04ca8123c500917e03, type: 3}

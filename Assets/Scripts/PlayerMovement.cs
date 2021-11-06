@@ -48,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
         myRigidbody.velocity = climbVelocity;
         myRigidbody.gravityScale = 0f;
 
+
     }
 
     void OnMove(InputValue value)

@@ -23,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float jumpSpeed = 10f;
     [SerializeField] float climbSpeed = 5f;
     [SerializeField] Vector2 deathKick = new Vector2(10f, 10f);
+    [SerializeField] GameObject bullet;
+    [SerializeField] Transform gun;
 
     // Start is called before the first frame update
     void Start()
@@ -121,5 +123,11 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
+    }
+
+    void OnFire(InputValue value)
+    {
+        if (!isAlive) { return; }
+        Instantiate(bullet, gun.position, transform.rotation);
     }
 }

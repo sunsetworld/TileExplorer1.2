@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] GameObject bullet;
     [SerializeField] Transform gun;
 
+
     // Start is called before the first frame update
     void Start()
     {

@@ -12,8 +12,9 @@ public class PlayerMovement : MonoBehaviour
     CapsuleCollider2D myBodyCollider;
     BoxCollider2D myFeetCollider;
     PlayerInput myPlayerInput;
-    float gravityScaleAtStart;
     Physics2D myPhysics;
+    SpriteRenderer mySpriteRenderer;
+    float gravityScaleAtStart;
     bool isAlive = true;
 
 
@@ -21,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float runSpeed = 10f;
     [SerializeField] float jumpSpeed = 10f;
     [SerializeField] float climbSpeed = 5f;
+    [SerializeField] Vector2 deathKick = new Vector2(10f, 10f);
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
         gravityScaleAtStart = myRigidbody.gravityScale;
         myFeetCollider = GetComponent<BoxCollider2D>();
         myPlayerInput = GetComponent<PlayerInput>();
+        mySpriteRenderer = GetComponent<SpriteRenderer>();
 
 
     }
@@ -112,6 +115,10 @@ public class PlayerMovement : MonoBehaviour
         if (myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemies")))
         {
             isAlive = false;
+            myAnimator.SetTrigger("isDying");
+            mySpriteRenderer.color = Color.blue;
+            myRigidbody.velocity = deathKick;
+
         }
 
     }
